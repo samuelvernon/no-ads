@@ -1,0 +1,21 @@
+{
+	"name": "noAdds",
+	"version": "1.0",
+	"description": "The extension that hides adds",
+	"background": {
+		"scripts": ["no-adds.js"],
+		"persistent": false
+	},
+  "permissions": [
+		"activeTab", "declarativeContent", "storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["no-adds.js"]
+		}
+	],
+	"manifest_version": 2
+}
