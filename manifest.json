@@ -1,9 +1,9 @@
 {
-	"name": "noAdds",
+	"name": "no-ads",
 	"version": "1.0",
 	"description": "The extension that hides adds",
 	"background": {
-		"scripts": ["no-adds.js"],
+		"scripts": ["no-ads.js"],
 		"persistent": false
 	},
   "permissions": [
@@ -14,7 +14,7 @@
 			"matches": [
 				"<all_urls>"
 			],
-			"js": ["no-adds.js"]
+			"js": ["no-ads.js"]
 		}
 	],
 	"manifest_version": 2
