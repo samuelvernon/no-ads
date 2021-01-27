@@ -39,7 +39,7 @@ function ads() {
 			'[src*="flashtalking"]',
 			'[src*="doubleclick"]',
 			'[name*="banner"]',
-			'[id*="banner"]',
+			// '[id*="banner"]',
 			'[id*="adnxs"]',
 			'[id*="player-ads"]',
 			'[id*="_ems_"]',
