@@ -3,19 +3,23 @@
 	"version": "1.0",
 	"description": "The extension that hides adds",
 	"background": {
-		"scripts": ["no-ads.js"],
-		"persistent": false
+		"service_worker": "no-ads.js"
 	},
-  "permissions": [
-		"activeTab", "declarativeContent", "storage"
+	"permissions": [
+		"activeTab",
+		"declarativeContent",
+		"storage",
+		"scripting"
 	],
 	"content_scripts": [
 		{
 			"matches": [
 				"<all_urls>"
 			],
-			"js": ["no-ads.js"]
+			"js": [
+				"no-ads.js"
+			]
 		}
 	],
-	"manifest_version": 2
+	"manifest_version": 3
 }

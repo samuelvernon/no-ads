@@ -17,6 +17,7 @@ function ads() {
 			'[class*="_ad_"]',
 			'[class*="ad-microsites"]',
 			'[class*="addelivered"]',
+			'[class*="ad-wrapper"]',
 			'[class*="brid"]',
 			'[class*="hstp_"]',
 			'[class*="img-ad"]',
@@ -27,6 +28,7 @@ function ads() {
 			'[class*="video-ads"]', // youtube start
 			'[class*="ytp-ad-overlay-container"]',
 			'[class*="ytd-comments"]', // youtube comments //  youtube end
+			'[data-service-slot-initialized]>iframe',
 			'[href*="ad11"]',
 			'[href*="adfarm"]',
 			'[href*="adheader"]',
@@ -67,7 +69,8 @@ function ads() {
 			'[class*="ytp-ad-module"]',
 			'[data-ad-client*="ca"]',
 			'[jpx-object-id]',
-			'[ytd-third-party-manager]'
+			'[ytd-third-party-manager]',
+			// '[referrerpolicy]',
 		];
 
 		for (var i = 0; i < strings.length; i++) {
@@ -109,12 +112,15 @@ function doIt() {
 
 (function() {
 
-	document.addEventListener('DOMContentLoaded', function( event ) { doIt(); }, false);	
-	window.onload = function( event ) { doIt(); }
-	window.onchange = function( event ) { doIt(); }
-	window.onscroll = function( event ) { doIt(); }
-	window.onmouseenter = function( event ) { doIt(); }
-	document.querySelector('body').addEventListener( 'change', function( event ) { doIt(); } );
+	setTimeout( () => {
+		document.addEventListener('DOMContentLoaded', function( event ) { doIt(); }, false);	
+		window.onload = function( event ) { doIt(); }
+		window.onchange = function( event ) { doIt(); }
+		window.onscroll = function( event ) { doIt(); }
+		window.onmouseenter = function( event ) { doIt(); }
+		document.querySelector('body').addEventListener( 'change', function( event ) { doIt(); } );
+	}, 2000 );
+	
 	
 	
 
