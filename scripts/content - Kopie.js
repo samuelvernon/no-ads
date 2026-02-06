@@ -76,7 +76,6 @@ function ads() {
     'iframe[width="728"][height="90"]',
     '[class*="video-ads"]',
     '[class*="ytp-ad-module"]',
-    '[class*="strawberry-ads"]',
     '[data-ad-client*="ca"]',
     '[jpx-object-id]',
     '[ytd-third-party-manager]',
