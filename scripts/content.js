@@ -51,11 +51,14 @@ function ads() {
     '[src*="doubleclick"]',
     '[name*="banner"]',
     // '[id*="banner"]',
+    '[id*="_ems_"]',
+    '[id*="-desktop-leaderboard"]',
+    '[id*="-desktop-billboard"]',
     '[id="act-adContainer"]',
     '[id*="adnxs"]',
-    '[id*="player-ads"]',
-    '[id*="_ems_"]',
     '[id*="emsBackground"]',
+    '[id*="google_ads_iframe_"]',
+    '[id*="player-ads"]',
     '[id*="outbrain"]',
     '[data-qa*="Commercial"]',
     '[data-adservice-param-tagid*="e"]',
@@ -74,6 +77,9 @@ function ads() {
     '[data-google-query-id*="o"]',
     '[data-google-query-id*="u"]',
     'iframe[width="728"][height="90"]',
+    '[class*="3rd party ad content"]',
+    '[class*="adsbygoogle"]',
+    '[class*="event passby"]',
     '[class*="video-ads"]',
     '[class*="ytp-ad-module"]',
     '[class*="strawberry-ads"]',
@@ -87,7 +93,8 @@ function ads() {
   ];
 
   for (var i = 0; i < strings.length; i++) {
-    const items = document.querySelectorAll('html ' + strings[i]);
+    // const items = document.querySelectorAll('html ' + strings[i]);
+    const items = document.querySelectorAll(strings[i]);
 
     if (items) {
       items.forEach((item) => {
